@@ -12,6 +12,9 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+  <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+  <script src="dist/js/whatsapp-widget.min.js"></script>
+
   <title>RAVISON Technologie • Nos services</title>
 
   <!-- slider stylesheet -->
@@ -160,7 +163,7 @@
                     Réseaux informatiques
                   </h6>
                   <p>
-                    adipiscing elit, sed do eiusmod tempor incididunt
+                    Gestion complète de votre réseau informatique
                   </p>
                   <div class="btn-box">
                     <a href="">
@@ -177,6 +180,95 @@
     </section>
 
   <!-- end service section -->
+
+  <div>
+    <!-- Toggleable custom form -->
+  <style>
+    .whatsapp-widget {
+        max-width: 480px;
+        display: none;
+    }
+    .whatsapp-widget.expanded {
+        display: block;
+    }
+  </style>
+  <!-- End -->
+
+  <!-- Built in form -->
+  <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+  <!-- End -->
+    
+  <script src="js/whatsapp-widget.min.js"></script>
+  <script>
+      var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+      name: 'RAVISON Technologie',
+      division: 'General Supports',
+      photo: 'images/logo.png',
+      introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+        }, [
+            {
+                data: 'Votre nom',
+                type: 'text',
+                required: true
+            }, {
+                data: 'Votre adresse email',
+                type: 'email',
+                required: false
+            }, {
+                data: 'Votre message',
+                type: 'text',
+                required: true
+            }
+        ]);
+        generalSupport.toggle()
+    </script>
+
+  </div>
+
+
+  <div>
+    <!-- Toggleable custom form -->
+  <style>
+    .whatsapp-widget {
+        max-width: 480px;
+        display: none;
+    }
+    .whatsapp-widget.expanded {
+        display: block;
+    }
+  </style>
+  <!-- End -->
+
+  <!-- Built in form -->
+  <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+  <!-- End -->
+    
+  <script src="js/whatsapp-widget.min.js"></script>
+  <script>
+      var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+      name: 'RAVISON Technologie',
+      division: 'General Supports',
+      photo: 'images/logo.png',
+      introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+        }, [
+            {
+                data: 'Votre nom',
+                type: 'text',
+                required: true
+            }, {
+                data: 'Votre adresse email',
+                type: 'email',
+                required: false
+            }, {
+                data: 'Votre message',
+                type: 'text',
+                required: true
+            }
+        ]);
+        generalSupport.toggle()
+    </script>
+
+  </div>
 
   <!-- info section -->
   <section class="info_section layout_padding">
@@ -228,8 +320,8 @@
               </h4>
               <ul>
                 <li>
-                  <form action="#">
-                    <input type="text" placeholder="Entrez votre email" />
+                  <form name="souscription newsletter" method="POST" data-netlify="true">
+                    <input type="text" name="email" placeholder="Entrez votre email" />
                     <button type="submit">
                       Souscrire
                     </button>
@@ -260,7 +352,7 @@
                 <a href="">
                   <img src="images/telephone.png" alt="">
                   <span>
-                    ( +226 ) 76 20 27 24
+                    ( +226 ) 70 06 39 30
                   </span>
                 </a>
               </div>

@@ -12,6 +12,9 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+  <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+  <script src="dist/js/whatsapp-widget.min.js"></script>
+  
   <title>RAVISON TECHNOLOGIE</title>
 
   <!-- slider stylesheet -->
@@ -132,8 +135,7 @@
                           </span>
                         </h1>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                          sed do eiusmod tempor incididunt ut labore
+                          Grâce à ses partenariats avec les plus grandes marques du marché, RAVISON Technologie vous propose un large choix d'équipements informatiques pour votre entreprise.
                         </p>
                       </div>
                     </div>
@@ -317,7 +319,7 @@
                     Réseaux informatiques
                   </h6>
                   <p>
-                    adipiscing elit, sed do eiusmod tempor incididunt
+                    Gestion complète de votre réseau informatique
                   </p>
                   <div class="btn-box">
                     <a href="">
@@ -341,50 +343,58 @@
       <div class="container">
         <div class="custom_heading-container">
           <h3 class=" ">
-            TITRE
+            Comment fonctionne t-on ?
           </h3>
         </div>
       </div>
-      <div class="work_container ">
+      <div class="work_container">
         <div class="box b-1">
           <div class="img-box">
-            <img src="Description" alt="">
+            <img src="images/etude.png" alt="">
           </div>
           <div class="name">
             <h6>
-              Description
+              Etude de votre projet
             </h6>
           </div>
         </div>
         <div class="box b-2">
           <div class="img-box ">
-            <img src="" alt="">
+            <img src="images/solutions.png" alt="">
           </div>
           <div class="name">
             <h6>
-              Description
+              Proposition de solutions adéquates
             </h6>
           </div>
         </div>
         <div class="box b-3">
           <div class="img-box ">
-            <img src="" alt="">
+            <img src="images/mise.png" alt="">
           </div>
           <div class="name">
             <h6>
-              Description
+              Mise en place
             </h6>
           </div>
         </div>
         <div class="box b-4">
           <div class="img-box ">
-            <img src="" alt="">
+            <img src="images/formation.png" alt="">
           </div>
           <div class="name">
             <h6>
-              Description 
+              Formation 
             </h6>
           </div>
+        </div>
+        <div class="box b-5">
+          <div class="img-box">
+            <img src="images/maintenance.png" alt="">
+          </div>
+            <h6>
+              Maintenance & </br>Assistance
+            </h6>
         </div>
       </div>
     </section>
@@ -403,7 +413,7 @@
       <div class="container layout_padding2-top">
         <div class="row">
           <div class="col-md-6 mx-auto">
-            <form name="contact" method="POST" action="contact.html" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true">
               <div>
                 <input type="text" name="nom" placeholder="NOM">
               </div>
@@ -489,8 +499,8 @@
               </h4>
               <ul>
                 <li>
-                  <form action="#">
-                    <input type="text" placeholder="Entrez votre email" />
+                  <form name="souscription newsletter" method="POST" data-netlify="true">
+                    <input name="email" type="text" placeholder="Entrez votre email" />
                     <button type="submit">
                       Souscrire
                     </button>
@@ -531,7 +541,49 @@
       </div>
     </section>
 
-
+    <div>
+      <!-- Toggleable custom form -->
+    <style>
+      .whatsapp-widget {
+          max-width: 480px;
+          display: none;
+      }
+      .whatsapp-widget.expanded {
+          display: block;
+      }
+    </style>
+    <!-- End -->
+  
+    <!-- Built in form -->
+    <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+    <!-- End -->
+      
+    <script src="js/whatsapp-widget.min.js"></script>
+    <script>
+        var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+        name: 'RAVISON Technologie',
+        division: 'General Supports',
+        photo: 'images/logo.png',
+        introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+          }, [
+              {
+                  data: 'Votre nom',
+                  type: 'text',
+                  required: true
+              }, {
+                  data: 'Votre adresse email',
+                  type: 'email',
+                  required: false
+              }, {
+                  data: 'Votre message',
+                  type: 'text',
+                  required: true
+              }
+          ]);
+          generalSupport.toggle()
+      </script>
+  
+    </div>
 
     <!-- end info_section -->
 
@@ -553,6 +605,8 @@
       }
     </script>
   </div>
+
+  
 </body>
 
 

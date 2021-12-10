@@ -12,6 +12,9 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+  <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+  <script src="dist/js/whatsapp-widget.min.js"></script>
+
   <title>RAVISON Technologie • A propos de nous</title>
 
   <!-- slider stylesheet -->
@@ -73,6 +76,50 @@
     <!-- end header section -->
   </div>
 
+  <div>
+    <!-- Toggleable custom form -->
+  <style>
+    .whatsapp-widget {
+        max-width: 480px;
+        display: none;
+    }
+    .whatsapp-widget.expanded {
+        display: block;
+    }
+  </style>
+  <!-- End -->
+
+  <!-- Built in form -->
+  <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+  <!-- End -->
+    
+  <script src="js/whatsapp-widget.min.js"></script>
+  <script>
+      var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+      name: 'RAVISON Technologie',
+      division: 'General Supports',
+      photo: 'images/logo.png',
+      introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+        }, [
+            {
+                data: 'Votre nom',
+                type: 'text',
+                required: true
+            }, {
+                data: 'Votre adresse email',
+                type: 'email',
+                required: false
+            }, {
+                data: 'Votre message',
+                type: 'text',
+                required: true
+            }
+        ]);
+        generalSupport.toggle()
+    </script>
+
+  </div>
+
   <!-- about section -->
   <section class="about_section layout_padding">
       <div class="container">
@@ -85,7 +132,7 @@
           RAVISON Technologie est une Entreprise Burkinabé spécialisée dans l’ingénierie informatique et l’installation de système de contrôle, de surveillance et de sécurité électronique.
         </p>
         <div class="img-box layout_padding2">
-          <img src="images/team.png" alt="">
+          <img src="images/logo.png" alt="">
         </div>
         <p class="layout_padding2-bottom">
           Elle apporte son expertise aux sociétés qui ont des difficultés et/ou des besoins en informatique. Son aide pour les petites sociétés qui désirent avoir un service informatique de qualité est inégalable. Intégrateur de solutions informatiques, RAVISON Technologie intervient dans tous les domaines informatiques avec des interventions respectant les normes de qualité. Elle dispose également de système de tracking évolué qui permet de donner le maximum d’information sur le suivi des véhicules (Une géolocalisation évoluée et une vidéosurveillance). Elle se charge de surveiller vos locaux (maison, entrepôt, salle, jardin, domaine, etc.) en installant des caméras de vidéosurveillance HD et IP pour garantir votre sécurité et la sécurité de vos biens.
@@ -146,8 +193,8 @@
               </h4>
               <ul>
                 <li>
-                  <form action="#">
-                    <input type="text" placeholder="Entrez votre email" />
+                  <form name="souscription newsletter" method="POST" data-netlify="true">
+                    <input type="text" name="email" placeholder="Entrez votre email" />
                     <button type="submit">
                       Souscrire
                     </button>

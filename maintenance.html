@@ -12,6 +12,9 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+  <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+  <script src="dist/js/whatsapp-widget.min.js"></script>
+
   <title>RAVISON Technologie • Service de maintenance</title>
 
   <!-- slider stylesheet -->
@@ -91,7 +94,7 @@
                       <div>
                         <h1>
                           <br>
-                          Service de <br>
+                          Service de 
                           <span>
                             Maintenance
                           </span>
@@ -101,11 +104,28 @@
                         </p>
                       </div>
                       <div>
-                      Confiez l’infogérance de votre parc informatique à des spécialistes afin d’améliorer vos performances et atteindre vos objectifs de développement. Notre approche est de privilégier une maintenance préventive au lieu d’une maintenance corrective. Nous n’attendons pas que les problèmes surviennent, mais les anticipons pour garantir la continuité de votre système d’information et de votre parc informatique. Nos services sont adaptés aux PME, ETI et TPE et nous proposons des périodes d’astreintes.
+                        <h6>
+                          Confiez l’infogérance de votre parc informatique à des spécialistes afin d’améliorer vos performances et atteindre vos objectifs de développement. Notre approche est de privilégier une maintenance préventive au lieu d’une maintenance corrective. Nous n’attendons pas que les problèmes surviennent, mais les anticipons pour garantir la continuité de votre système d’information et de votre parc informatique. Nos services sont adaptés aux PME, ETI et TPE et nous proposons des périodes d’astreintes.
+                        </h6>
+                        <br>
                       </div>
                     </div>
                   </div>
+                </div>
 
+                <div class="row justify-content-center">
+                  <div class="col-md-10">
+                    <div class="card">
+                      <div class="card-body">
+                        <h6>
+                          votre entreprise à se positionner sur le marché plus rapidement et à l’échelle mondiale. 
+                          Notre équipe vous contactera pour mieux connaître vos objectifs et vous proposer un devis 
+                          personnalisé.
+                        </h6>
+                        <button type="button" class="btn btn-primary btn-lg">Obtenir un devis</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,8 +135,54 @@
       </section>
     <!-- end slider section -->
   </div>
-  <div class="bg">    
+
+  <div>
+    <!-- Toggleable custom form -->
+  <style>
+    .whatsapp-widget {
+        max-width: 480px;
+        display: none;
+    }
+    .whatsapp-widget.expanded {
+        display: block;
+    }
+  </style>
+  <!-- End -->
+
+  <!-- Built in form -->
+  <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+  <!-- End -->
     
+  <script src="js/whatsapp-widget.min.js"></script>
+  <script>
+      var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+      name: 'RAVISON Technologie',
+      division: 'General Supports',
+      photo: 'images/logo.png',
+      introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+        }, [
+            {
+                data: 'Votre nom',
+                type: 'text',
+                required: true
+            }, {
+                data: 'Votre adresse email',
+                type: 'email',
+                required: false
+            }, {
+                data: 'Votre message',
+                type: 'text',
+                required: true
+            }
+        ]);
+        generalSupport.toggle()
+    </script>
+
+  </div>
+  
+
+
+  <div class="bg">    
     <!-- info section -->
     <section class="info_section layout_padding">
       <div class="container">
@@ -167,8 +233,8 @@
               </h4>
               <ul>
                 <li>
-                  <form action="#">
-                    <input type="text" placeholder="Entrez votre email" />
+                  <form name="souscription newsletter" method="POST" data-netlify="true">
+                    <input type="text" name="email" placeholder="Entrez votre email" />
                     <button type="submit">
                       Souscrire
                     </button>
@@ -199,7 +265,7 @@
                 <a href="">
                   <img src="images/telephone.png" alt="">
                   <span>
-                    ( +226 ) 76 20 27 24
+                    ( +226 ) 70 06 39 30
                   </span>
                 </a>
               </div>
@@ -208,7 +274,6 @@
         </div>
       </div>
     </section>
-
 
 
     <!-- end info_section -->
@@ -222,8 +287,6 @@
     </section>
     <!-- footer section -->
 
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 
 </html>
