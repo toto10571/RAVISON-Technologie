@@ -83,31 +83,30 @@
         <h3 class=" ">
           Obtenir un devis
         </h3>
-      </div>
-      <div class="container layout_padding2-top">
+      </div><div class="container layout_padding2-top">
         <div class="row">
           <div class="col-md-6 mx-auto">
-            <form action="">
+            <form name="contact" method="POST" data-netlify="true">
               <div>
-                <input type="text" placeholder="NOM">
+                <input type="text" name="nom" placeholder="NOM">
               </div>
               <div>
-                <input type="email" placeholder="EMAIL">
+                <input type="email" name="email" placeholder="EMAIL">
               </div>
               <div>
-                <input type="text" placeholder="TELEPHONE">
+                <input type="text" name="tel" placeholder="TELEPHONE">
               </div>
               <div>
-                <select name="" id="">
+                <select name="service[]">
                   <option value="" disabled selected>TYPE DE SERVICE</option>
-                  <option value="">Maintenance Informatique</option>
-                  <option value="">Sécurité</option>
-                  <option value="">Audit & Conseil</option>
-                  <option value="">Fourniture & équipements informatiques</option>
+                  <option value="Maintenance Informatique">Maintenance Informatique</option>
+                  <option value="Sécurité">Sécurité</option>
+                  <option value="Audit & Conseil">Audit & Conseil</option>
+                  <option value="Fourniture & équipements informatiques">Fourniture & équipements informatiques</option>
                 </select>
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Votre message">
+                <input type="text" name="message" class="message-box" placeholder="Votre message">
               </div>
               <div class="d-flex justify-content-center ">
                 <button>
@@ -116,7 +115,7 @@
               </div>
             </form>
           </div>
-        </div>
+      
 
       </div>
     </section>
